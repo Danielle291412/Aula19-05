@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+
+<script>
+    function Validar()
+    {
+        let anoAtual= new Date().getFullYear();
+        let anoNasc = document.getElementById("ano").value;
+
+        if(anoNasc > 1000)
+        {
+            alert("Entrada inválida!");
+        }
+        else{
+            
+        let idade = anoAtual - parseInt(anoNasc);
+        document.getElementById("resultado").innerHTML = idade;
+
+        if(idade >= 10)
+            {
+                msg = "Válido";
+            }
+            else
+            {
+                msg = "Válido";
+            }
+            document.getElementById("resultado").innerHTML = msg;   
+        
+    }
+        }
+    
+</script>
+
+</head>
+<body>
+    <input type="text" name="ano" id="ano">
+    <button onclick="Validar()">Validar</button>
+    <p id="resultado"></p>
+
+</body>
+</html>
